@@ -1,0 +1,155 @@
+<app-header></app-header>
+<br>
+<div class="form-group">
+        <a [routerLink]="['/insurancePolicies']"><button class="btn btn-primary">Back</button></a>
+       <!--   <button (click)="updatepage1()">1</button>
+           <button (click)="updatepage2()">2</button> -->
+    </div>
+<div class="row">
+<div class="col-md-4">
+  <p-tabView>
+    <!-- <p-tabPanel header="Personal Details">
+      <div class="row">
+        <div class="col-md-6">
+           <div class="row">
+            <div class="col-md-12">
+              <strong>PROPOSED INSURED</strong>
+            </div>
+          </div>
+          <div class="row mt-2">
+          <div class="col-md-12">
+            <label for="pi_firstName">First Name</label>
+            <input type="text" class="form-control" name="pi_firstName" id="pi_firstName"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="pi_middleName">Middle Name</label>
+            <input type="text" class="form-control" name="pi_middleName" id="pi_middleName"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="pi_lastName">Last Name</label>
+            <input type="text" class="form-control" name="pi_lastName" id="pi_lastName"/>              
+          </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <strong>PROPOSER </strong>
+            </div>
+          </div>
+                   
+          <div class="row mt-2">
+          <div class="col-md-12">
+            <label for="p_firstName">First Name</label>
+            <input type="text" class="form-control" name="p_firstName" id="p_firstName"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="p_middleName">Middle Name</label>
+            <input type="text" class="form-control" name="p_middleName" id="p_middleName"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="p_lastName">last Name</label>
+            <input type="text" class="form-control" name="p_lastName" id="p_lastName"/>              
+          </div>
+          </div>
+        </div>
+      </div>
+      </p-tabPanel> -->
+
+
+      <p-tabPanel header="PROPOSED INSURED">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row mt-2">
+          <div class="col-md-12">
+            <label for="pi_firstName">First Name</label>
+            <input type="text" class="form-control" name="pi_firstName" id="pi_firstName" (focus)="onFocusEvent('PD_FirstName')"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="pi_middleName">Middle Name</label>
+            <input type="text" class="form-control" name="pi_middleName" id="pi_middleName" (focus)="onFocusEvent('PD_MiddleName')"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="pi_lastName">Last Name</label>
+            <input type="text" class="form-control" name="pi_lastName" id="pi_lastName" (focus)="onFocusEvent('PD_LastName')"/>              
+          </div>
+          </div>
+        </div>
+      </div>
+      </p-tabPanel>
+      <p-tabPanel header="PROPOSER">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="row mt-2">
+          <div class="col-md-12">
+            <label for="p_firstName">First Name</label>
+            <input type="text" class="form-control" name="p_firstName" id="p_firstName" (focus)="onFocusEvent('PR_FirstName')"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="p_middleName">Middle Name</label>
+            <input type="text" class="form-control" name="p_middleName" id="p_middleName" (focus)="onFocusEvent('PR_MiddleName')"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="p_lastName">last Name</label>
+            <input type="text" class="form-control" name="p_lastName" id="p_lastName" (focus)="onFocusEvent('PR_LastName')"/>              
+          </div>
+          </div>
+        </div>
+      </div>
+      </p-tabPanel>
+      <p-tabPanel header="DRUG HISTORY">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="row mt-2">
+          <div class="col-md-12">
+            <label for="d_usedAs">Used as</label>
+            <input type="text" class="form-control" name="d_usedAs" id="d_usedAs" (focus)="onFocusEvent('DH_UsedAs')"/>              
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <label for="d_quality">Quantity</label>
+            <input type="text" class="form-control" name="d_quantity" id="d_quantity" (focus)="onFocusEvent('DH_Quantity')"/>              
+          </div>
+          </div>
+        </div>
+      </div>
+      </p-tabPanel>
+      
+      
+</p-tabView>
+
+</div>
+<div class="col-md-8">
+  <div class="col-md-12">
+    <ngx-extended-pdf-viewer
+    [src]="filePathAndName"
+    backgroundColor="#ffffff"
+    [height]="'90vh'"
+    [useBrowserLocale]="true"
+    [zoom]="90"
+    [page]="page"
+    (pagesLoaded)="onPageLoaded()"
+    (pageRendered)="onPageRendered()"
+    > 
+    </ngx-extended-pdf-viewer>
+  </div>
+</div>
+
+</div>

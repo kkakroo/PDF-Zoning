@@ -1,0 +1,104 @@
+<app-header></app-header>
+<h2 class="heading">Insurance Policies</h2>
+<p-accordion>
+	<p-accordionTab header="Policy 1">
+		<p-table [columns]="cols" [value]="policy1" [lazy]="true" [paginator]="true" [rows]="10"
+		 [totalRecords]="totalRecords" [loading]="loading">
+			<ng-template pTemplate="header" let-columns>
+				<tr>
+					<th *ngFor="let col of columns">
+						{{col.header}}
+					</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-rowData let-columns="columns">
+				<tr>
+					<td *ngFor="let col of columns" [ngSwitch]="col.field">
+						<span *ngSwitchCase="'policyNumber'">
+              <a [routerLink]="['/policyForm']">{{rowData[col.field]}}</a></span>
+            <span *ngSwitchCase="'status'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'customerNumber'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'reference'">{{rowData[col.field]}}</span>
+					</td>
+				</tr>
+			</ng-template>
+		</p-table>
+
+	</p-accordionTab>
+	<p-accordionTab header="Policy 2">
+		<p-table [columns]="cols" [value]="policy2" [lazy]="true" [paginator]="true" [rows]="10"
+		 [totalRecords]="totalRecords" [loading]="loading">
+			<ng-template pTemplate="header" let-columns>
+				<tr>
+					<th *ngFor="let col of columns">
+						{{col.header}}
+					</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-rowData let-columns="columns">
+				<tr>
+					<td *ngFor="let col of columns" [ngSwitch]="col.field">
+						<span *ngSwitchCase="'policyNumber'">
+              <a [routerLink]="['/policyForm']">{{rowData[col.field]}}</a></span>
+            <span *ngSwitchCase="'status'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'customerNumber'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'reference'">{{rowData[col.field]}}</span>
+					</td>
+				</tr>
+			</ng-template>
+		</p-table>
+	</p-accordionTab>
+	<p-accordionTab header="Policy 3">
+		<p-table [columns]="cols" [value]="policy3" [lazy]="true" [paginator]="true" [rows]="10"
+		 [totalRecords]="totalRecords" [loading]="loading">
+			<ng-template pTemplate="header" let-columns>
+				<tr>
+					<th *ngFor="let col of columns">
+						{{col.header}}
+					</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-rowData let-columns="columns">
+				<tr>
+					<td *ngFor="let col of columns" [ngSwitch]="col.field">
+						<span *ngSwitchCase="'policyNumber'">
+              <a [routerLink]="['/policyForm']">{{rowData[col.field]}}</a></span>
+            <span *ngSwitchCase="'status'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'customerNumber'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'reference'">{{rowData[col.field]}}</span>
+					</td>
+				</tr>
+			</ng-template>
+		</p-table>
+	</p-accordionTab>
+<p-accordionTab header="Policy 4">
+		<p-table [columns]="cols" [value]="policy4" [lazy]="true" [paginator]="true" [rows]="10"
+		 [totalRecords]="totalRecords" [loading]="loading">
+			<ng-template pTemplate="header" let-columns>
+				<tr>
+					<th *ngFor="let col of columns">
+						{{col.header}}
+					</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-rowData let-columns="columns">
+				<tr>
+					<td *ngFor="let col of columns" [ngSwitch]="col.field">
+						<span *ngSwitchCase="'policyNumber'">
+              <a [routerLink]="['/policyForm']">{{rowData[col.field]}}</a></span>
+            <span *ngSwitchCase="'status'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'customerNumber'">{{rowData[col.field]}}</span>
+            <span *ngSwitchCase="'reference'">{{rowData[col.field]}}</span>
+					</td>
+				</tr>
+			</ng-template>
+		</p-table>
+	</p-accordionTab>
+</p-accordion>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
